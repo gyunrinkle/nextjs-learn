@@ -1,10 +1,12 @@
+import { useState } from "react";
+
 const Header = ({ title = "Default title" }) => {
   return <h1>{title}</h1>;
 };
 
 const Homepage = () => {
   const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
-  const [likes, setLikes] = React.useState(0);
+  const [likes, setLikes] = useState(0);
   const handleClick = () => {
     console.log("increment like count");
     setLikes(likes + 1);
@@ -22,4 +24,4 @@ const Homepage = () => {
   );
 };
 
-ReactDOM.render(<Homepage />, app);
+export default Homepage;
